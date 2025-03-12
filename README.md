@@ -51,8 +51,9 @@ Ensure you have the following installed:
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ai-legal-adviser.git
-   cd ai-legal-adviser
+   git clone [https://github.com/Abdulla-Ai-Ml/AI-Legal-Assistant-for-Advocates.git]
+  cd AI-Legal-Assistant-for-Advocates
+   
    ```
 2. Install dependencies:
    ```bash
@@ -63,7 +64,7 @@ Ensure you have the following installed:
 
 4. Run the application:
    ```bash
-   streamlit run app.py
+   streamlit run ai-legal-assistant.py
    ```
 
 ## Future Improvements
@@ -72,6 +73,4 @@ Ensure you have the following installed:
 - Improve multi-language support with additional Indian languages.
 - Enhance the UI with a more intuitive design.
 
-## License
-This project is open-source and available under the [MIT License](LICENSE).
 
