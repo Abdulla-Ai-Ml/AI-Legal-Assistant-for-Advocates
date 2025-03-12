@@ -14,7 +14,7 @@ import speech_recognition as sr  # For speech-to-text
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 # Initialize Groq client
-GROQ_API_KEY = "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"  # Replace with your Groq API key
+GROQ_API_KEY = "enter your key"  # Replace with your Groq API key
 groq_client = Groq(api_key=GROQ_API_KEY)
 
 # Load InLegalBERT from Hugging Face
