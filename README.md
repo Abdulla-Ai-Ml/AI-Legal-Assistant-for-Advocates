@@ -1,80 +1,77 @@
-🚀 Introducing AI Legal Adviser: Your AI-Powered Legal Assistant for Indian Law ⚖️
-I’m thrilled to share my latest project: AI Legal Adviser, a cutting-edge AI-powered tool designed to assist advocates and individuals with legal queries related to Indian law. This project combines advanced AI technologies, natural language processing (NLP), and a user-friendly interface to make legal information more accessible and actionable.
+# AI Legal Adviser
 
-Whether you’re an advocate looking for quick legal references or someone seeking clarity on Indian law, this tool is here to help—in both English and Hindi!
+## Overview
+AI Legal Adviser is an advanced AI-powered legal assistant designed to help advocates and legal professionals quickly access relevant Indian legal information. This project leverages natural language processing (NLP) and deep learning to provide legal insights based on user queries in English or Hindi. The assistant retrieves relevant legal documents, understands the user's query, and generates contextually accurate responses.
 
-✨ Key Features
-Multilingual Support:
+## Features
+- **Legal Document Retrieval**: Uses FAISS for efficient searching and retrieval of relevant legal documents.
+- **AI-Powered Responses**: Utilizes Groq's Llama-based model to generate legal responses.
+- **Multi-Language Support**: Supports queries in both English and Hindi.
+- **Voice Input**: Converts speech to text for hands-free interaction.
+- **Context Awareness**: Maintains conversation history using LangChain's memory module.
 
-Handles queries in both English and Hindi, making it accessible to a wider audience.
+## Technologies Used
+- **Python**: Core programming language.
+- **Streamlit**: For building an interactive web-based UI.
+- **Transformers (Hugging Face)**: Loads and processes the InLegalBERT model for legal text embedding.
+- **FAISS (Facebook AI Similarity Search)**: Enables fast and accurate searching of legal documents.
+- **LangChain**: Manages conversation history and integrates AI models.
+- **Groq API**: Generates AI-based legal responses.
+- **SpeechRecognition**: Provides speech-to-text functionality.
+- **LangDetect**: Identifies the language of user queries.
 
-Voice Input:
+## How It Works
+### 1. Load Legal Documents and Create Embeddings
+- Predefined Indian legal texts are embedded using the InLegalBERT model.
+- FAISS indexes these embeddings to enable quick retrieval.
 
-Speak your query instead of typing! The tool uses speech recognition to convert your voice into text, supporting both English and Hindi.
+### 2. Process User Queries
+- Users can type their legal queries in English or Hindi.
+- Alternatively, they can use voice input, which gets converted to text.
 
-Contextual Legal Advice:
+### 3. Retrieve Relevant Legal Documents
+- The system searches for relevant legal texts using FAISS.
+- The most relevant legal excerpts are retrieved for context.
 
-Generates accurate and context-aware responses using Groq’s advanced language models combined with InLegalBERT embeddings.
+### 4. Generate AI-Based Legal Advice
+- Language detection is performed to determine whether the query is in English or Hindi.
+- A dynamic prompt is created using LangChain, including the query and retrieved legal context.
+- Groq's AI model generates a legal response based on the prompt.
 
-Efficient Document Retrieval:
+### 5. Display the Response
+- The chatbot displays the AI-generated response along with relevant legal documents.
+- Users can view more details through an expandable section.
 
-Uses FAISS (Facebook AI Similarity Search) to quickly retrieve the most relevant legal documents from a curated database.
+## Installation
+### Prerequisites
+Ensure you have the following installed:
+- Python 3.x
+- Pip
 
-User-Friendly Interface:
+### Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/ai-legal-adviser.git
+   cd ai-legal-adviser
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Set up the Groq API key:
+   Replace `GROQ_API_KEY` in the script with your own API key.
 
-Built with Streamlit, the interface is simple, intuitive, and easy to navigate.
+4. Run the application:
+   ```bash
+   streamlit run app.py
+   ```
 
-🛠️ How It Works
-User Input:
+## Future Improvements
+- Expand the legal database with more documents.
+- Integrate additional AI models for better legal interpretations.
+- Improve multi-language support with additional Indian languages.
+- Enhance the UI with a more intuitive design.
 
-Users can either type or speak their legal query. The tool detects the language (English or Hindi) automatically.
+## License
+This project is open-source and available under the [MIT License](LICENSE).
 
-Legal Document Search:
-
-The query is processed using InLegalBERT, a legal-specific NLP model, to generate embeddings. These embeddings are then used to search a database of legal texts using FAISS.
-
-Response Generation:
-
-The retrieved legal documents are passed to Groq’s language model (LLama-3.3-70b) to generate a contextual and accurate response.
-
-Display Results:
-
-The response is displayed in the chat interface, along with the relevant legal documents for reference.
-
-🔧 Technologies Used
-Natural Language Processing (NLP):
-
-InLegalBERT: A legal-specific variant of BERT for generating embeddings of legal texts.
-
-Machine Learning:
-
-PyTorch: For handling model inference and tensor operations.
-
-Vector Search:
-
-FAISS: For efficient and fast retrieval of relevant legal documents.
-
-Conversational AI:
-
-LangChain: For managing prompt templates and conversational memory.
-
-Speech Recognition:
-
-SpeechRecognition Library: For converting speech to text.
-
-Advanced Language Models:
-
-Groq API: For generating high-quality, context-aware responses.
-
-Web Interface:
-
-Streamlit: For building a simple and interactive web app.
-
-💡 Why This Matters
-The AI Legal Adviser is more than just a tool—it’s a step toward democratizing access to legal information. By leveraging AI, this project aims to:
-
-Empower advocates with quick and accurate legal references.
-
-Help individuals understand complex legal concepts in a simple and accessible way.
-
-Bridge the gap between technology and law, making legal knowledge available to everyone.
