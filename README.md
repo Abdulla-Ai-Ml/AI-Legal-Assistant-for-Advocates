@@ -42,6 +42,9 @@ AI Legal Adviser is an advanced AI-powered legal assistant designed to help advo
 - The chatbot displays the AI-generated response along with relevant legal documents.
 - Users can view more details through an expandable section.
 
+- 
+
+
 ## Installation
 ### Prerequisites
 Ensure you have the following installed:
